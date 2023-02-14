@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { VuelosController } from './vuelos.controller';
 import { VuelosService } from './vuelos.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { USUARIO } from 'src/common/models/models';
+import { VUELOS } from 'src/common/models/models';
 import { VuelosSchema } from './schema/vuelos.schema';
 
 
@@ -11,7 +11,7 @@ import { VuelosSchema } from './schema/vuelos.schema';
   imports:[
     MongooseModule.forFeatureAsync([
       {
-        name:USUARIO.name,
+        name:VUELOS.name,
         useFactory:()=>{
           return VuelosSchema;
         }
